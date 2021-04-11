@@ -1,0 +1,975 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #ece5da;
+  --name-font: "Fredericka the Great", cursive;
+  --heading-font: "Gruppo", cursive;
+  --paragraph-font: "Julius Sans One", sans-serif;
+  --color2: rgba(33, 37, 41, 0.92);
+  --montserrat: "Montserrat", sans-serif;
+  --comfortaa: "Comfortaa", cursive;
+}
+header {
+  background-color: #fdfff5;
+}
+
+li,
+a {
+  font-family: var(--heading-font);
+  color: var(--color2);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 4%;
+  /*   border-bottom: 1px solid black; */
+  box-shadow: 1px 6px 15px 2px #adb5bd;
+}
+
+.logo {
+  width: 8%;
+}
+
+.nav_links {
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0;
+  position: relative;
+  padding: 0.5vw;
+}
+
+.nav_links li a:hover {
+  color: black;
+}
+#projects {
+  margin: 0vw 10vw;
+  padding: 2vw;
+}
+
+.nav_links li a::before,
+.nav_links li a::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.nav_links li a::before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 2px solid rgba(33, 37, 41, 0.92);
+  border-right: 2px solid rgba(33, 37, 41, 0.92);
+  transform: translate(-100%, 50%);
+}
+
+.nav_links li a:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 2px solid rgba(33, 37, 41, 0.92);
+  border-left: 2px solid rgba(33, 37, 41, 0.92);
+  transform: translate(100%, -50%);
+}
+
+.nav_links li a:hover:before,
+.nav_links li a:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav_links li a:hover {
+  color: black;
+}
+.project-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.project-title h1 {
+  font-family: var(--paragraph-font);
+  color: black;
+  font-size: 35px;
+  padding: 2vw;
+}
+#school-project h3 {
+  font-family: var(--heading-font);
+  color: black;
+  font-size: 28px;
+}
+.img {
+  width: 17vw;
+  height: 17vw;
+  background-color: var(--color2);
+}
+
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 10px;
+  max-width: 886px;
+}
+
+.box {
+  height: 20vw;
+  width: 20vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box h1 {
+  font-family: var(--heading-font);
+  color: black;
+  font-size: 30px;
+  padding: 1vw;
+}
+
+#box1 {
+  background-color: rgba(199, 125, 255, 0.76);
+}
+#box2 {
+  background-color: rgba(0, 18, 51, 0.82);
+}
+#box3 {
+  background-color: rgba(74, 78, 105, 0.82);
+}
+#box4 {
+  background-color: rgba(255, 234, 0, 1);
+}
+#box5 {
+  background-color: rgba(32, 32, 32, 1);
+  color: white;
+}
+#box1 img {
+  display: block;
+  width: 100%;
+}
+#box6 h2 {
+  font-family: var(--heading-font);
+  color: var(--color2);
+  font-size: 30px;
+}
+#box6 .fa-github {
+  color: var(--color2);
+  font-size: 50px;
+  margin-top: 1vw;
+}
+#box6 .fa-github:hover {
+  color: black;
+  transform: rotate(10deg);
+}
+#box6 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.box h3 {
+  font-family: var(--paragraph-font);
+  color: black;
+  font-size: 15px;
+  opacity: 0;
+}
+
+.box:hover {
+  opacity: 0.8;
+  outline: #fff solid 2px;
+  outline-offset: -10px;
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95) ease 2s;
+}
+
+.box:hover h3 {
+  opacity: 1;
+}
+
+#social_links {
+  display: flex;
+  flex-direction: row;
+
+  padding: 2vw;
+}
+
+#social_links .fa-github,
+#social_links .fa-linkedin,
+#social_links .fa-twitter-square {
+  color: var(--color2);
+  font-size: 38px;
+  margin: 0 1.5vw;
+}
+
+#social_links .fa-github:hover,
+#social_links .fa-linkedin:hover,
+#social_links .fa-twitter-square:hover {
+  color: black;
+  transform: rotate(10deg);
+}
+
+/*about*/
+
+#introduction {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 10px;
+  margin: 2vw 10vw;
+}
+.intro-img {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+.intro-img figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 100%;
+  max-width: 800px;
+  max-height: 100%;
+  width: 48%;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.intro-img figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.intr.intro-img figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.intro-img figure figcaption::before,
+.intro-img figure figcaption::after {
+  pointer-events: none;
+}
+
+.intro-img figure figcaption,
+.intro-img figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.intro-img figure h2 {
+  font-family: var(--paragraph-font);
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.intro-img figure h2 span {
+  font-weight: 800;
+}
+
+.intro-img figure h2,
+.intro-img figure p {
+  margin: 0;
+}
+
+.intro-img figure p {
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: var(--heading-font);
+}
+
+figure.effect-milo {
+  background: #2e5d5a;
+  box-shadow: 1px 6px 15px 2px #adb5bd;
+}
+
+figure.effect-milo img {
+  max-width: none;
+  width: -webkit-calc(100% + 60px);
+  width: calc(100% + 60px);
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+  transform: translate3d(-30px, 0, 0) scale(1.12);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-milo:hover img {
+  opacity: 0.5;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+figure.effect-milo h2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em 1.2em;
+  color: white;
+}
+
+figure.effect-milo p {
+  padding: 0 10px 0 0;
+  width: 50%;
+  border-right: 1px solid #fff;
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+}
+
+figure.effect-milo:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  margin-top: 4vw;
+  color: yellow;
+}
+
+.intro-text {
+  background-color: var(--color2);
+  height: 25vw;
+  margin-top: 3vw;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.intro-text h1 {
+  font-family: var(--paragraph-font);
+  color: white;
+  font-size: 27px;
+}
+.intro-text h3 {
+  font-family: var(--heading-font);
+  color: white;
+  font-size: 20px;
+  margin-top: 1vw;
+  letter-spacing: 2px;
+}
+.about-me {
+  padding: 3vw;
+}
+
+.intro-text h3 a {
+  text-decoration: none;
+  color: yellow;
+}
+.focus {
+  color: yellow;
+}
+.change {
+  margin-top: 1vw;
+}
+
+#skills h1 {
+  font-family: var(--paragraph-font);
+  font-size: 45px;
+  color: white;
+  margin: 0vw 10vw;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-wrapper {
+  padding: 2vw;
+}
+.skills-icons {
+  margin: 0vw 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.skills-icons ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0vw 5vw;
+}
+
+#skills {
+  width: 100%;
+  background-color: var(--color2);
+}
+.skills-icons ul li a {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 80px;
+  color: #666;
+  transition: 0.5s;
+}
+
+.skills-icons ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.skills-icons ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fdfff5;
+}
+
+.skills-icons ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #fdfff5;
+  text-shadow: 0 0 5px#fdfff5;
+}
+
+.fa-html5,
+.fa-css3-alt,
+.fa-js-square {
+  padding: 1.5vw;
+}
+.skills-icons2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.skills-icons2 img {
+  width: 7%;
+  margin: 0 6vw;
+}
+
+.skills-icons2 :hover {
+  background-color: yellow;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid red;
+}
+
+#connect-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0vw 10vw;
+  padding: 3vw;
+}
+.connect {
+  height: 30vw;
+  width: 30vw;
+  background-color: var(--color2);
+  margin-right: 2vw;
+}
+
+.contact {
+  height: auto;
+  width: auto;
+  background-color: var(--color2);
+}
+
+.connect-text {
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.connect-text h1 {
+  font-family: var(--heading-font);
+  color: white;
+  font-size: 25px;
+}
+.connect-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect-icons .fa-github,
+.connect-icons .fa-linkedin,
+.connect-icons .fa-twitter-square {
+  font-size: 80px;
+  margin-top: 2vw;
+}
+.connect-icons .fa-github:hover,
+.connect-icons .fa-linkedin:hover,
+.connect-icons .fa-twitter-square:hover {
+  color: black;
+  transform: rotate(10deg);
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+}
+.contact-text h1 {
+  font-family: var(--heading-font);
+  color: white;
+  font-size: 30px;
+}
+/*individual-projects*/
+.back-button {
+  margin: 2vw 8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-links .fa-github,
+.button-links .fa-linkedin,
+.button-links .fa-twitter-square {
+  font-size: 30px;
+  margin-left: 1.5vw;
+}
+
+.button-links .fa-github:hover,
+.button-links .fa-linkedin:hover,
+.button-links .fa-twitter-square:hover {
+  color: black;
+  transform: rotate(10deg);
+}
+
+.fa-arrow-circle-left {
+  font-size: 40px;
+}
+.fa-arrow-circle-left:hover {
+  transform: scale(1.3);
+}
+#project-content {
+  margin: 1vw 10vw;
+}
+.content-title h1 {
+  font-family: var(--montserrat);
+  color: black;
+  font-size: 40px;
+}
+.content-desc p {
+  font-family: var(--comfortaa);
+  font-size: 18px;
+  padding: 10px;
+}
+
+.content-desc h3 {
+  font-family: var(--heading-font);
+  font-size: 18px;
+}
+#focus {
+  color: yellow;
+  font-weight: bold;
+}
+.content-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 1vw;
+}
+.content-img img {
+  width: 60%;
+  filter: sepia(100%);
+  transition: 0.3s ease-in-out;
+  margin-left: 13vw;
+}
+.content-img img:hover {
+  filter: sepia(0);
+}
+.github {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+}
+.github .fa-github {
+  font-size: 130px;
+}
+.github-text h3 {
+  font-family: var(--montserrat);
+  font-size: 25px;
+  text-align: center;
+}
+.github .fa-github:hover {
+  color: black;
+}
+.contents-more p {
+  font-family: var(--comfortaa);
+}
+.av a {
+  text-decoration: none;
+  color: black;
+}
+
+.content-list {
+  font-family: var(--montserrat);
+  font-size: 18px;
+}
+
+.contents-li h3 {
+  font-family: var(--montserrat);
+  font-size: 22px;
+}
+.contents-li p {
+  font-family: var(--comfortaa);
+  font-size: 16px;
+  padding-top: 1vw;
+  letter-spacing: 1px;
+}
+
+.contents-ul {
+  margin-top: 1vw;
+}
+.contents-li {
+  margin-top: 1.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .box h1 {
+    font-size: 15px;
+  }
+
+  .project-title h1 {
+    font-size: 26px;
+  }
+  #social_links .fa-github,
+  #social_links .fa-linkedin,
+  #social_links .fa-twitter-square {
+    font-size: 26px;
+  }
+  #box6 h2 {
+    font-size: 25px;
+  }
+
+  /*about*/
+  .intro-text h1 {
+    font-size: 23px;
+  }
+  .intro-text h3 {
+    font-size: 14px;
+  }
+  .intro-text h3 a {
+    font-size: 14px;
+  }
+  .intro-text {
+    height: auto;
+  }
+  #skills h1 {
+    font-size: 23px;
+  }
+  .skills-icons ul li a {
+    height: 86px;
+    width: 86px;
+    font-size: 49px;
+  }
+  .fa-html5,
+  .fa-css3-alt,
+  .fa-js-square {
+    padding: 2.5vw;
+  }
+
+  .skills-icons2 img {
+    width: 11%;
+  }
+
+  .connect-icons {
+    flex-direction: row;
+  }
+  .connect-icons .fa-github,
+  .connect-icons .fa-linkedin,
+  .connect-icons .fa-twitter-square {
+    font-size: 60px;
+    margin-top: 5vw;
+    margin-right: 2vw;
+    color: black;
+  }
+
+  /*indiidual projects*/
+
+  .back-button {
+    margin: 3vw 10vw;
+  }
+  .content-title h1 {
+    font-size: 30px;
+  }
+  .content-title p {
+    font-size: 15px;
+  }
+  .content-title h3 {
+    font-size: 15px;
+  }
+  .content-img img {
+    filter: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  .github .fa-github {
+    font-size: 95px;
+  }
+  .github-text h3 {
+    font-size: 20px;
+  }
+  .contents-li {
+    margin-top: 2vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav_links li a {
+    font-size: 13px;
+  }
+  .project-title h1 {
+    padding: 5vw;
+    font-size: 15px;
+  }
+
+  #social_links .fa-github,
+  #social_links .fa-linkedin,
+  #social_links .fa-twitter-square {
+    font-size: 17px;
+  }
+
+  #project-grid {
+    grid-template-columns: repeat(1, 4fr);
+    grid-template-rows: none;
+  }
+  .box {
+    width: 100%;
+  }
+
+  #box6 h2 {
+    font-size: 18px;
+    margin-top: 5vw;
+  }
+  #box6 .fa-github {
+    color: black;
+    font-size: 33px;
+    margin-top: 4vw;
+  }
+
+  /*about*/
+
+  .logo {
+    width: 12%;
+  }
+
+  #introduction {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .intro-img {
+    padding: 0;
+  }
+  .about-me {
+    padding: 6vw;
+  }
+  .intro-text h1 {
+    font-size: 18px;
+  }
+  .intro-text h3 {
+    font-size: 12px;
+  }
+  .intro-text h3 a {
+    font-size: 12px;
+  }
+  #skills h1 {
+    font-size: 16px;
+    padding: 4vw;
+  }
+
+  .skills-icons ul li a {
+    height: 52px;
+    width: 52px;
+    font-size: 29px;
+    color: black;
+  }
+
+  #connect-me {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .connect {
+    height: 30vw;
+    width: 75vw;
+  }
+
+  .connect-text h1 {
+    font-size: 23px;
+  }
+  .connect-icons .fa-github,
+  .connect-icons .fa-linkedin,
+  .connect-icons .fa-twitter-square {
+    font-size: 37px;
+  }
+  .contact {
+    margin-top: 4vw;
+  }
+  .contact-text h1 {
+    font-size: 25px;
+  }
+  /*individual projects*/
+  .fa-arrow-circle-left {
+    font-size: 25px;
+  }
+
+  .button-links .fa-github,
+  .button-links .fa-linkedin,
+  .button-links .fa-twitter-square {
+    font-size: 20px;
+  }
+
+  .content-title h1 {
+    font-size: 22px;
+  }
+  .content-title p {
+    font-size: 12px;
+  }
+  .content-title h3 {
+    font-size: 12px;
+  }
+  .back-button {
+    margin: 4vw 10vw;
+  }
+  .github .fa-github {
+    font-size: 70px;
+  }
+  .github-text h3 {
+    font-size: 15px;
+  }
+
+  .contents-li h3 {
+    font-size: 20px;
+  }
+  .contents-li p {
+    font-size: 15px;
+    padding: 1vw;
+  }
+  .contents-li {
+    margin-top: 3vw;
+  }
+}

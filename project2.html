@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/work.css">
+    <title>Work</title>
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+/>
+</head>
+<body>
+    <header>
+        <div id="navigation" >
+            <img class="logo" src="./images/PORTFOLIO LOGO1.png" alt="Nirajan Shrestha">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT ME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="back-button">
+            <div class="button">
+                <a href="work.html">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </a>
+            </div>
+            <div class="button-links">
+                <a href="https://github.com/nira0101?tab=repositories"
+                target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/nirajan-shrestha-0161b31ba/"
+              target="_blank" ><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/Nirajan50515912"
+              target="_blank" ><i class="fab fa-twitter-square"></i></a>
+            </div>
+           
+        </div>
+        <section id="project-content">
+            <div class="content-title"><h1>Hacked Hogwarts</h1></div>
+            <div class="content-desc">
+                <p>Hacked hogwarts is a school project where i had to build a system to help 
+                    the administrators handle student lists  from the infamous class of 1991.
+                   
+                </p>
+               
+                
+                <h3>Click the image to vist Hacked Hogwarts website</h3>
+            </div>
+            <div class="content-img">
+                <a href="http://nirajan.dk/hackedHogwarts/" target="_blank">
+                    <img src="./images/hacked-hogwarts.png" alt="hacked hogwarts">
+                </a>
+            </div>
+            <div class="contents-more">
+                   <p> This project had 12 different requiremnet which i had to code and design from Html Css and JavaScript</p>
+                   <ul class="content-ul">
+                       <li class="contents-li">
+                           <h3>The list</h3>
+                           <p>The solution must display a list of students. The list is intended
+                                for administrators to get a quick overview of the 
+                               students in the current year, and sort, filter, and search for certain properties.</p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Sorting</h3>
+                           <p>The administrator must be able to sort the list on at least first,
+                                and last names. Also a kind of sort, that would group e.g. students in the same house,
+                                 or those with certain responsibilities (could be quidditch-players, -captains, prefects,
+                                  or club memberships).
+                           </p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Filtering</h3>
+                           <p>The administrator must be able to filter the view, so only students from one house is shown.
+                                Also, filters that only showed those with certain responsibilities.
+                             </p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Searching</h3>
+                           <p>
+                            The administrator must be able to quickly search for a student, e.g. by first name or last name.
+                             A search field,
+                             that immediately limits the listed students to those matching the search criteria
+                           </p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>About</h3>
+                           <p>
+                            The interface must show some details about the lists:
+                            <br>
+                            Number of students in each house
+                            <br>
+                            Total number of students (not expelled)
+                            <br>
+                            Number of students expelled
+                            <br>
+                            Number of students currently displayed
+                            <br>
+                            </li>
+                           </p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Deatils pop up</h3>
+                           <p>The administrator must be able to select a student, and get a "popup" with details.
+                            This popup must be decorated (or "themed" as it is called)
+                             with the house crest and colors of the selected student. And must show,
+                             First name
+                             Middle name (if any)
+                             Nick name (if any)
+                             Last name
+                             Photo of student (if exists)
+                             House Crest and colors
+                             Blood-status
+                             If the student is:
+                             prefect or not
+                             expelled or not
+                             member of inquisitorial squad or no</p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Expelling students</h3>
+                           <p>The user must be able to expell students.Expelling removes a student from the list of students,
+                                and adds it to another list of expelled students.
+                                Once expelled, a student cannot return to the original list.</p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Prefects</h3>
+                           <p>Only two students from each house can be selected prefects. Usually a boy and a girl.
+                            The user must be able to make any student a prefect, and also revoke the prefect-status at any time.
+                             There must be some sort of system to prevent more than two prefects from each house</p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Blood-status</h3>
+                           <p>The system must calculate blood-status for each student. 
+                               This is an indication of whether the student is from a pure wizarding family,
+                                or from a half-wizard, half-muggle family, or just plain muggle.</p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Inquisitorial Squad</h3>
+                           <p>The user must be able to appoint students to the inquisitorial squad, and remove them again. Any number of students can be appointed,
+                                but only pure-blood or students from Slytherin (should any non-pure-blood be in that house).</p>
+                       </li>
+                       <li class="contents-li">
+                           <h3>Hacking</h3>
+                           <p>
+                            Create a function called hackTheSystem() that performs, or activates,
+                             the hacking when called. You can add a secret button or keystroke that the user can enter to hack 
+                             the system,
+                             but it must also be possible to do from the console. 
+                             Hacking must result in (atleast) three things happening
+                             <br>
+                             Injecting you own data in data listed
+                             <br>
+                             Mess with blood Blood-status <br>
+                             Adding a student to the inquisitorial squad will only work for a limited time,
+                              before the student is automatically removed again
+        
+                           </p>
+                   </ul>
+            </div>
+
+            <div class="visit">
+                <div class="github">
+                    <a href="https://github.com/nira0101/-Hacked-Hogwarts-Student-List"
+                    target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="github-text">
+                    <h3>Visit my Github repository to view my code</h3>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <div class="cursor"></div>
+</body>
+<script src="js/work.js"></script>
+</html>
